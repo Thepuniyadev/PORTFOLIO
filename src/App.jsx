@@ -1,35 +1,54 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Element } from "react-scroll";
 
-function App() {
-  const [count, setCount] = useState(0)
+// Import your components
+import Navbar from "./page/Navbar";
+import { Hero } from "./page/Hero";
+import About from "./page/About";
+import Gmail from "./page/Gmail";
+import Project from "./page/Project";
+import ContactLinks from "./components/ContactLinks";
 
+import StickyResumeButton from "./components/StickyResumeButton";
+
+// ✅ Optional: Wrap main portfolio sections into a MainPage component
+const MainPage = () => {
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+      <Navbar />
 
-export default App
+      <Element name="home">
+        <Hero />
+      </Element>
+
+      <Element name="projects">
+        <Project />
+      </Element>
+
+      <Element name="contact">
+        <Gmail />
+      </Element>
+
+      <Element name="about">
+        <About />
+      </Element>
+
+      <StickyResumeButton />
+      <ContactLinks/>
+    </>
+  );
+};
+
+const App = () => {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<MainPage />} />
+        <Route path="/contact" element={<ContactLinks />} />
+      </Routes>
+    </Router>
+  );
+};
+
+export default App;
