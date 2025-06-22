@@ -308,13 +308,13 @@ const Project = () => {
             />
             <span className="flex group-hover:-top-14 ease-jump duration-200 bg-[#459bd5] sm:absolute left-1/2 sm:-translate-x-1/2 top-5 px-2 py-1 text-sm sm:text-base mt-2 rounded w-max items-center gap-1 after:hidden sm:after:block after:w-4 after:h-4 after:bg-inherit after:absolute after:left-1/2 after:-translate-x-1/2 after:rotate-45 after:-bottom-2">
              
-            E-Trends
+          Krishna-Ai
             </span>
           </div>
         </a>
 
         <div className="w-full  card8">
-          <h3 className="text-red-400 font-bold text-2xl md:text-4xl"> E-Trends </h3>
+          <h3 className="text-red-400 font-bold text-2xl md:text-4xl">  Krishna Ai </h3>
           <span className="text-red-400 text-base md:text-lg m-0.5">( Your smart partner for everyday tasks!)</span>
           <p className="text-justify text-sm md:text-base mt-2 text-yellow-400">
           Make is a creative platform designed to help users build, design, and organize their ideas into real projects. Whether it's creating a to-do list, designing a product, or managing a team task, Make offers easy-to-use tools for planning, tracking, and completing projects efficiently.
